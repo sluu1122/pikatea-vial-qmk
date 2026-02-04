@@ -17,17 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* Final working configuration: 1 row (GP26), 8 columns */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 8
-
-/* Ordered by physical position: keys 1-6, then encoder presses */
-#define MATRIX_COL_PINS {GP11, GP27, GP28, GP10, GP3, GP4, GP9, GP2}
-#define MATRIX_ROW_PINS {GP26}
-
-/* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
-
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
@@ -40,8 +29,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
-/* Encoders - using v4-style pins for prototype hardware */
-#define ENCODERS_PAD_A {GP5, GP7}
-#define ENCODERS_PAD_B {GP6, GP8}
 #define ENCODER_RESOLUTION 4
-

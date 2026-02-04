@@ -1,2 +1,1 @@
-# Build Options - most options are now in info.json
-ENCODER_ENABLE = yes
+# Build Options - all options are in info.json

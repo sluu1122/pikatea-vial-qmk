@@ -1,0 +1,55 @@
+{
+    "keyboard_name": "The Richard v2",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "vid": "0x5049",
+        "pid": "0x0024",
+        "device_version": "0.0.1"
+    },
+    "url": "http://www.pikatea.com",
+    "maintainer": "Jack Kester",
+    "manufacturer": "Jack Kester",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": true,
+        "extrakey": true,
+        "nkro": false,
+        "encoder": true,
+        "tap_dance": true
+    },
+    "build": {
+        "lto": true
+    },
+    "matrix_size": {
+        "rows": 1,
+        "cols": 8
+    },
+    "matrix_pins": {
+        "cols": ["GP11", "GP27", "GP28", "GP10", "GP3", "GP4", "GP9", "GP2"],
+        "rows": ["GP26"]
+    },
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP5", "pin_b": "GP6"},
+            {"pin_a": "GP7", "pin_b": "GP8"}
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0, "label": "Key1"},
+                {"matrix": [0, 1], "x": 1, "y": 0, "label": "Key2"},
+                {"matrix": [0, 2], "x": 2, "y": 0, "label": "Key3"},
+                {"matrix": [0, 3], "x": 3, "y": 0, "label": "Key4"},
+                {"matrix": [0, 4], "x": 4, "y": 0, "label": "Key5"},
+                {"matrix": [0, 5], "x": 5, "y": 0, "label": "Key6"},
+                {"matrix": [0, 6], "x": 6, "y": 0, "label": "TopEnc"},
+                {"matrix": [0, 7], "x": 7, "y": 0, "label": "BotEnc"}
+            ]
+        }
+    }
+}

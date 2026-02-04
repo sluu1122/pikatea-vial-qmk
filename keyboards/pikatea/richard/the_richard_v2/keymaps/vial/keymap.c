@@ -15,31 +15,28 @@
  */
 #include QMK_KEYBOARD_H
 
+/* Layout: Key1, Key2, Key3, Key4, Key5, Key6, TopEncPress, BotEncPress */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-_______, _______, _______, _______, _______, _______, _______, _______, 
-_______, _______, _______, _______, _______, _______, _______, _______ 
-        ),
+        // KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_MPLY, KC_MUTE
+        _______, _______, _______, _______, _______, _______, KC_MPLY, KC_MUTE
+    ),
     [1] = LAYOUT(
-_______, _______, _______, _______, _______, _______, _______, _______, 
-_______, _______, _______, _______, _______, _______, _______, _______ 
-        ),
+        _______, _______, _______, _______, _______, _______, _______, _______
+    ),
     [2] = LAYOUT(
-_______, _______, _______, _______, _______, _______, _______, _______, 
-_______, _______, _______, _______, _______, _______, _______, _______ 
-        ),
+        _______, _______, _______, _______, _______, _______, _______, _______
+    ),
     [3] = LAYOUT(
-_______, _______, _______, _______, _______, _______, _______, _______, 
-_______, _______, _______, _______, _______, _______, _______, _______ 
-        )
+        _______, _______, _______, _______, _______, _______, _______, _______
+    )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [1] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [2] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [3] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [1] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [2] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [3] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
 };
 #endif
-
